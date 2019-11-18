@@ -3,6 +3,7 @@ services:
   app:
     volumes:
       - "./:/app"
+      - "./docker/php/.user.ini:/usr/local/etc/php/php.ini"
     working_dir: /app
     command: "php artisan serve --host=0.0.0.0 --port=8000"
     ports:
